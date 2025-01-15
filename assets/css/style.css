@@ -2118,3 +2118,39 @@ only screen and (min-width: 768px) and (max-width: 991px),
   font-size: 20px;
   color: #34a853;
 }
+
+.about-image {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  /* 防止内容溢出 */
+}
+
+.about-image img {
+  display: block;
+  /* 移除图片底部间隙 */
+  width: 100%;
+  /* 根据需要调整图片大小 */
+  height: auto;
+  /* 保持图片比例 */
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  /* 调整阴影和模糊区域的大小 */
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
+  /* 确保在图片下方 */
+  background: rgba(255, 255, 255, 0.2);
+  /* 半透明背景，用于增强模糊效果 */
+  backdrop-filter: blur(15px);
+  /* 毛玻璃效果 */
+  border-radius: 15px;
+  /* 圆角效果，与阴影和模糊区域相匹配 */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  /* 阴影效果 */
+}
