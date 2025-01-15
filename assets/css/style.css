@@ -894,6 +894,7 @@ p {
 
 .single-services:hover {
   border-color: #fe7a7b;
+  box-shadow: 0 0 16px 0 rgba(254,122,122,0.35), 0 0 0 0 rgba(23,26,29,0.12);
 }
 
 .single-services:hover .services-icon .shape {
@@ -2086,18 +2087,35 @@ only screen and (min-width: 768px) and (max-width: 991px),
   padding-bottom: 225px;
 }
 
+
 .card-header-1 .price {
-  margin-top: 10px;
+  margin-top: 14px;
   font-size: 20px;
-  color: #a19e9e;
+  color: #747677;
+}
+
+.price-unit {
+  font-size: 16px;
+  font-weight: bolder;
+  color: #2E2E2E;
+}
+.price-num {
+  font-size: 32px;
+  font-weight: bolder;
+  color: #2E2E2E;
+  padding: 10px 5px 0 6px;
+}
+.price-desc {
+  color: #2E2E2E;
+  padding-top: 10px;
 }
 
 .card-body {
-  padding: 20px;
+  padding: 10px 20px 20px 40px;
 }
 
 .card-body p {
-  margin: 0 0 15px;
+  margin: 0 0 25px;
   color: #555;
 }
 
@@ -2124,6 +2142,11 @@ only screen and (min-width: 768px) and (max-width: 991px),
   display: inline-block;
   overflow: hidden;
   /* 防止内容溢出 */
+  
+  border-radius: 4px;
+  /* 圆角效果，与阴影和模糊区域相匹配 */
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.15), 0 0 0 0 rgba(23,26,29,0.12);
+  /* 阴影效果 */
 }
 
 .about-image img {
@@ -2133,24 +2156,4 @@ only screen and (min-width: 768px) and (max-width: 991px),
   /* 根据需要调整图片大小 */
   height: auto;
   /* 保持图片比例 */
-}
-
-.about-image::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  /* 调整阴影和模糊区域的大小 */
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  z-index: -1;
-  /* 确保在图片下方 */
-  background: rgba(255, 255, 255, 0.2);
-  /* 半透明背景，用于增强模糊效果 */
-  backdrop-filter: blur(15px);
-  /* 毛玻璃效果 */
-  border-radius: 15px;
-  /* 圆角效果，与阴影和模糊区域相匹配 */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  /* 阴影效果 */
 }
